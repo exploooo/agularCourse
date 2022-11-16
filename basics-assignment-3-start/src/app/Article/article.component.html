@@ -1,0 +1,8 @@
+<button 
+    class="btn btn-primary"
+    (click)="onClick($event)">More details</button>
+<p *ngIf="contentVisible">{{ content }}</p>
+<p 
+    *ngFor="let log of detailClickLog; index as i"
+    [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : '' }"
+    [ngClass]="{'white-text': i >= 4 ? 'white' : '' }">{{ log }}</p>
